@@ -63,7 +63,7 @@ const Register = () => {
   return (
     <Container h={'120vh'}>
       <VStack h={'full'} justifyContent={'center'} spacing={'8'}>
-        <Heading children="Register to CourseBundler" />
+        <Heading children="Register to E" />
 
         <form onSubmit={submitHandler} style={{ width: '100%' }}>
           <Box my={'4'} display={'flex'} justifyContent={'center'}>

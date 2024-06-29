@@ -9,7 +9,7 @@ export const contact = catchAsyncError(async (req, res, next) => {
     return next(new ErrorHandler("All fields are mandatory", 400));
 
   const to = process.env.MY_MAIL;
-  const subject = "Contact from Coursebundler";
+  const subject = "Contact from EduPoint";
   const text = `I am ${name} and my Email is ${email}. \n${message} `;
 
   await sendEmail(to, subject, text);
@@ -27,7 +27,7 @@ export const courseRequest = catchAsyncError(async (req, res, next) => {
     return next(new ErrorHandler("All fields are mandatory", 400));
 
   const to = process.env.MY_MAIL;
-  const subject = "Requesting for a course on Coursebundler";
+  const subject = "Requesting for a course on EduPoint";
   const text = `I am ${name} and my Email is ${email}. \n${course} `;
 
   await sendEmail(to, subject, text);
@@ -39,20 +39,19 @@ export const courseRequest = catchAsyncError(async (req, res, next) => {
 });
 
 export const getDashboardStats = catchAsyncError(async (req, res, next) => {
-
   const stats = await Stats.find({}).sort({ createdAt: "desc" }).limit(12);
   //  console.log(stats.length);
   let statsData = [];
-  
+
   for (let i = 0; i < stats.length; i++) {
     // console.log(stats[i]);
     statsData.unshift(stats[i]);
   }
-  
+
   const requiredSize = 12 - stats.length;
   // console.log(requiredSize);
   // push krne se end me add hota hai hume start me add krna hai
-  for(let i = 0; i < requiredSize; i++) {
+  for (let i = 0; i < requiredSize; i++) {
     statsData.unshift({
       users: 0,
       subscription: 0,
@@ -64,7 +63,7 @@ export const getDashboardStats = catchAsyncError(async (req, res, next) => {
   const usersCount = statsData[11].users;
   const subscriptionCount = statsData[11].subscription;
   const viewsCount = statsData[11].views;
-  
+
   // console.log(usersCount, subscriptionCount, viewsCount );
 
   let usersPercentage = 0,
@@ -162,7 +161,7 @@ export const getDashboardStats = catchAsyncError(async (req, res, next) => {
 //   }
 
 //   res.status(200).json({
-    
+
 //     success: true,
 //     stats: statsData,
 //     usersCount,

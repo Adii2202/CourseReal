@@ -1,5 +1,5 @@
 {
-  "name": "coursebundlerserver",
+  "name": "edupointserver",
   "version": "1.0.0",
   "type": "module",
   "description": "",
@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "nodemon server.js",
     "start": "node server.js",
-    "build":"npm i"
+    "build": "npm i"
   },
   "author": "",
   "license": "ISC",
