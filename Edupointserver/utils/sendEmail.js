@@ -2,11 +2,11 @@ import { createTransport } from "nodemailer";
 
 export const sendEmail = async (to, subject, text) => {
   const transporter = createTransport({
-    host: process.env.SMTP_HOST,
-    port: process.env.SMTP_PORT,
-    auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASS,
+    host: "65.0.178.19", // Public IP of your EC2 instance
+    port: 25, // Port your SMTP server is listening on
+    secure: false, // Set to true if using SSL/TLS
+    tls: {
+      rejectUnauthorized: false, // This is for testing, in production, handle this properly
     },
   });
 
