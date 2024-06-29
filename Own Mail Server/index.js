@@ -10,7 +10,7 @@ const server = new SMTPServer({
     console.log(`Mail from`, address.address, session.id);
     cb();
   },
-  onRcptTo(address, session, sb) {
+  onRcptTo(address, session, cb) {
     console.log(`Mail to`, address.address, session.id);
     cb();
   },

@@ -14,7 +14,7 @@ const Footer = () => {
           <Heading
             size={'sm'}
             fontFamily={'body'}
-            children="@pranav"
+            children="@Aditya"
             color={'yellow.400'}
           />
         </VStack>
@@ -26,15 +26,15 @@ const Footer = () => {
           fontSize={50}
         >
           <a
-            href="https://www.linkedin.com/in/pranav-nalawade-2a282022b/"
+            href="https://www.linkedin.com/in/aditya-ningule//"
             target={'blank'}
           >
             <TiSocialLinkedinCircular />
           </a>
-          <a href="https://www.instagram.com/_p.r.a.n.a.v_7/" target={'blank'}>
+          <a href="https://www.instagram.com/a_diitz/" target={'blank'}>
             <TiSocialInstagramCircular />
           </a>
-          <a href="https://github.com/pranavN45/" target={'blank'}>
+          <a href="https://github.com/Adii2202/" target={'blank'}>
             <DiGithub />
           </a>
         </HStack>
